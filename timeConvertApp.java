@@ -24,6 +24,25 @@ public class timeConvertApp{
             System.exit(1);
         }
         timeDetails time = new timeDetails(newHour, newMinute, newSecond, newMeridian);
+
+        System.out.println("Time Given: ");
+        time.displayTime12();
+
+        System.out.println("\nFast Forward by 1 second: ");
+        time.tickPerSecond();
+        time.displayTime12();
+
+        System.out.println("\nFast Forward by 1 minute: ");
+        time.tickPerMinute();
+        time.displayTime12();
+
+        System.out.println("\nFast Forward by 1 hour: ");
+        time.tickPerHour();
+        time.displayTime12();
+
+        System.out.println("\nTime using the 24 hour format: ");
+        time.displayTime24();
+        
         scanner.close();
     }
 }
