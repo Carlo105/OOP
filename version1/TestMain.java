@@ -4,8 +4,13 @@ public class TestMain {
     public static void main(String[] args) {
         HourlyEmployee emp = new HourlyEmployee(1, "Joe" , new myTime(23,2,2023), new myTime(3,3,2001), 45.2, 100.2);
         emp.displayInfo();
+        
         HourlyEmployee emp2 = new HourlyEmployee(2, 32.5, 100.2);
+        emp2.setempName("Scaler");
+        emp2.setempDateHired(new myTime(12,12,2012));
+        emp2.setbirthDate(new myTime(1,1,2001));
         emp2.displayInfo();
+        
         HourlyEmployee emp3 = new HourlyEmployee();
         
         PieceWorkerEmployee emp4 = new PieceWorkerEmployee();
