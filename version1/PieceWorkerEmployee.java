@@ -11,13 +11,13 @@ public class PieceWorkerEmployee {
     public PieceWorkerEmployee(){
     }
 
-    public PieceWorkerEmployee(int empID, int totalPiecesFinished, int ratePerPiece){
+    public PieceWorkerEmployee(int empID, double totalPiecesFinished, float ratePerPiece){
         this.empID = empID;
         this.totalPiecesFinished = totalPiecesFinished;
         this.ratePerPiece = ratePerPiece;
     }
 
-    public PieceWorkerEmployee(int empID, String empName, myTime empDateHired, myTime birthDate, int totalPiecesFinished, float ratePerPiece){
+    public PieceWorkerEmployee(int empID, String empName, myTime empDateHired, myTime birthDate, double totalPiecesFinished, float ratePerPiece){
         this.empID = empID;
         this.empName = empName;
         this.empDateHired = empDateHired;
