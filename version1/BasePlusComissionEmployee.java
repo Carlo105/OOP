@@ -73,7 +73,7 @@ public class BasePlusComissionEmployee {
         return baseSalary;
     }
 
-    double computeSalary(double totalPiecesFinished, double baseSalary){
+    double computeSalary(double totalSales, double baseSalary){
         double comission;
         if(totalSales < 50000){
             comission = totalSales*0.05;
