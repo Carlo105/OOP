@@ -22,7 +22,7 @@ public class PieceWorkerEmployee extends Employee{
         this.ratePerPiece = ratePerPiece;
     }
 
-    public PieceWorkerEmployee(int empID, String empName, myDate empDateHired, myDate birthDate, double totalPiecesFinished, float ratePerPiece){
+    public PieceWorkerEmployee(int empID, myName empName, myDate empDateHired, myDate birthDate, double totalPiecesFinished, float ratePerPiece){
         super(empID, empName, empDateHired, birthDate);
         this.totalPiecesFinished = totalPiecesFinished;
         this.ratePerPiece = ratePerPiece;
