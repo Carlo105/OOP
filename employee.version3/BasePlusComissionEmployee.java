@@ -48,7 +48,7 @@ public class BasePlusComissionEmployee extends ComissionEmployee{
     }
     @Override
     public void displayInfo() {
-        System.out.println("Hourly Employee: \n");
+        System.out.println("Base Plus Comission Employee: \n");
         System.out.println(toString());
         System.out.printf("Salary: %.2f\n", computeSalary(gettotalSales(), baseSalary));
     }
