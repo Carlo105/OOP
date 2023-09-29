@@ -20,7 +20,7 @@ public class ComissionEmployee extends Employee{
         this.totalSales = totalSales;
     }
 
-    public ComissionEmployee(int empID, String empName, myDate empDateHired, myDate birthDate, double totalSales){
+    public ComissionEmployee(int empID, myName empName, myDate empDateHired, myDate birthDate, double totalSales){
         super(empID, empName, empDateHired, birthDate);
         this.totalSales = totalSales;
     }
