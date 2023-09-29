@@ -16,7 +16,7 @@ public class TestMain {
         
         HourlyEmployee emp2 = new HourlyEmployee(2, 32.5F, 100.2F);
         emp2.setempName("Scalered");
-        emp2.setempDateHired(new myDate(12,12,2012));
+        emp2.setempDateHired(new myDate(11,11,2012));
         emp2.setbirthDate(new myDate(1,1,2001));
         emp2.displayInfo();
         
