@@ -88,6 +88,6 @@ public class myName {
     
     @Override
     public String toString(){
-         return String.format(" %s %s %c. %s %s", article, firstName, middleName, lastName, title);
+         return String.format(" %s %s %s %s %s", article, firstName, middleName, lastName, title);
     }
 }
