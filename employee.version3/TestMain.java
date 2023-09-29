@@ -11,13 +11,13 @@ package employee.version3;
  */
 public class TestMain {
     public static void main(String[] args) {
-        HourlyEmployee emp = new HourlyEmployee(1, new myName("Joe", "Rosette", "Hans") , new myDate(23,2,2023), new myDate(3,3,2001), 45.20F, 100.20F);
-        emp.displayInfo();
+        HourlyEmployee emp1 = new HourlyEmployee(1, new myName("Joe", "Rosette", "Hans") , new myDate(23,2,2023), new myDate(3,3,2001), 45.20F, 100.20F);
+        emp1.displayInfo();
         
         HourlyEmployee emp2 = new HourlyEmployee(2, 32.5F, 100.2F);
-        emp2.setempName(new myName("Mr." ,"Joe", "Rosette", "Hans"));
-        emp2.setempDateHired(new myDate(12,12,2012));
-        emp2.setbirthDate(new myDate(1,1,2001));
+        emp2.setempName(new myName("Mister" ,"Joe", "Rosette", "Hans"));
+        emp2.setempDateHired(new myDate(11,11,2012));
+        emp2.setbirthDate(new myDate(2,2,2001));
         emp2.displayInfo();
         
         HourlyEmployee emp3 = new HourlyEmployee();
