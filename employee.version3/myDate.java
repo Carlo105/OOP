@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package employee.version3;
+package employee.version4;
 
 /**
  *
@@ -50,12 +50,12 @@ public class myDate {
             return year;
         }
     
-        public void displayDate(){
-            System.out.printf(" %d/%d/%d ", month, day, year);
+        public String displayDate(){
+            return monthName[month-1] + " " + day + "," + year ;
         }
     
         @Override
         public String toString(){
-            return String.format(" %s %d, %d ", monthName[month+1], day, year);
+            return String.format("%s %d, %d ", monthName[month+1], day, year);
         }
     }
