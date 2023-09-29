@@ -20,7 +20,7 @@ public class BasePlusComissionEmployee extends ComissionEmployee{
         this.baseSalary = baseSalary;
     }
 
-    public BasePlusComissionEmployee(int empID, String empName, myDate empDateHired, myDate birthDate, double totalSales, double baseSalary){
+    public BasePlusComissionEmployee(int empID, myName empName, myDate empDateHired, myDate birthDate, double totalSales, double baseSalary){
         super(empID, empName, empDateHired, birthDate, totalSales);
     }
 
