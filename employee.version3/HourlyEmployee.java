@@ -60,7 +60,7 @@ public class HourlyEmployee extends Employee{
     public void displayInfo() {
         System.out.println("Hourly Employee: \n");
         System.out.println(toString());
-        System.out.printf("Salary: %.2f\n", computeSalary(totalHoursWorked, ratePerHour));
+        System.out.printf("Salary: %.2f\n\n", computeSalary(totalHoursWorked, ratePerHour));
     }
 
     @Override
