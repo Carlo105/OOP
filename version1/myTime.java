@@ -4,6 +4,7 @@ public class myTime {
         private int day;
         private int month;
         private int year;
+        String[] monthName = {"January", "February", "March", "May", "June", "July", "August", "September", "October", "November", "Decemeber"};
 
         //constructor
         public myTime(){
@@ -39,8 +40,8 @@ public class myTime {
             return year;
         }
     
-        public void displayDate(){
-            System.out.printf(" %d/%d/%d ", month, day, year);
+        public String displayDate(){
+            System.out.printf(" %s %d,%d ", monthName[month-1], day, year);
         }
     
         @Override
