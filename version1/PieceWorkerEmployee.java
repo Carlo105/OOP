@@ -85,11 +85,11 @@ public class PieceWorkerEmployee {
     }
 
     void displayInfo(){
-        System.out.printf("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Pieces Finished: %.2f  Rate Per Piece: %.2f Salary: %.2f/n", empID, empName, empDateHired.toString(), birthDate.toString(), totalPiecesFinished, ratePerPiece, computeSalary(totalPiecesFinished, ratePerPiece));
+        System.out.printf("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Pieces Finished: %.2f  Rate Per Piece: %.2f Salary: %.2f/n", empID, empName, empDateHired.displayDate(), birthDate.displayDate(), totalPiecesFinished, ratePerPiece, computeSalary(totalPiecesFinished, ratePerPiece));
     }
 
     @Override
     public String toString(){
-        return String.format("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Pieces Finished: %.2f  Rate Per Piece: %.2f Salary: %.2f/n", empID, empName, empDateHired.toString(), birthDate.toString(), totalPiecesFinished, ratePerPiece, computeSalary(totalPiecesFinished, ratePerPiece));
+        return String.format("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Pieces Finished: %.2f  Rate Per Piece: %.2f Salary: %.2f/n", empID, empName, empDateHired.displayDate(), birthDate.displayDate(), totalPiecesFinished, ratePerPiece, computeSalary(totalPiecesFinished, ratePerPiece));
     }
 }
