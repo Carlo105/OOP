@@ -86,11 +86,11 @@ public class HourlyEmployee{
     }
 
     void displayInfo(){
-        System.out.printf("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Hours Worked: %.2f  Rate Per Hour: %.2f  Salary: %.2f/n", empID, empName, empDateHired.toString(), birthDate.toString(), totalHoursWorked, ratePerHour, computeSalary(totalHoursWorked, ratePerHour));
+        System.out.printf("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Hours Worked: %.2f  Rate Per Hour: %.2f  Salary: %.2f/n", empID, empName, empDateHired.displayDate(), birthDate.displayDate(), totalHoursWorked, ratePerHour, computeSalary(totalHoursWorked, ratePerHour));
     }
 
     @Override
     public String toString(){
-        return String.format("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Hours Worked: %.2f  Rate Per Hour: %.2f  Salary: %.2f/n", empID, empName, empDateHired.toString(), birthDate.toString(), totalHoursWorked, ratePerHour, computeSalary(totalHoursWorked, ratePerHour));
+        return String.format("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Hours Worked: %.2f  Rate Per Hour: %.2f  Salary: %.2f/n", empID, empName, empDateHired.displayDate(), birthDate.displayDate(), totalHoursWorked, ratePerHour, computeSalary(totalHoursWorked, ratePerHour));
     }
 }
