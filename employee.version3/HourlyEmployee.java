@@ -22,7 +22,7 @@ public class HourlyEmployee extends Employee{
         this.ratePerHour = ratePerHour;
     }
 
-    public HourlyEmployee(int empID, String empName, myDate empDateHired, myDate birthDate, float totalHoursWorked, float ratePerHour){
+    public HourlyEmployee(int empID, myName empName, myDate empDateHired, myDate birthDate, float totalHoursWorked, float ratePerHour){
         super(empID, empName, empDateHired, birthDate);
         this.totalHoursWorked = totalHoursWorked;
         this.ratePerHour = ratePerHour;
