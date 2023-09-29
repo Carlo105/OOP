@@ -56,7 +56,7 @@ public class PieceWorkerEmployee extends Employee{
 
     @Override
     public void displayInfo() {
-        System.out.println("Hourly Employee: \n");
+        System.out.println("PieceWorker Employee: \n");
         System.out.println(toString());
         System.out.printf("Salary: %.2f\n", computeSalary(totalPiecesFinished, ratePerPiece));
     }
