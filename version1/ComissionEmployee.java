@@ -78,11 +78,11 @@ public class ComissionEmployee {
     }
 
     void displayInfo(){
-        System.out.printf("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Pieces Finished: %.2f Salary: %.2f/n", empID, empName, empDateHired.toString(), birthDate.toString(), totalSales, computeSalary(totalSales));
+        System.out.printf("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Pieces Finished: %.2f Salary: %.2f/n", empID, empName, empDateHired.displayDate(), birthDate.displayDate(), totalSales, computeSalary(totalSales));
     }
 
     @Override
     public String toString(){
-        return String.format("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Pieces Finished: %.2f Salary: %.2f/n", empID, empName, empDateHired.toString(), birthDate.toString(), totalSales, computeSalary(totalSales));
+        return String.format("ID:%d Employee Name: %s Date Hired: %s Birth Date: %s Total Pieces Finished: %.2f Salary: %.2f/n", empID, empName, empDateHired.displayDate(), birthDate.displayDate(), totalSales, computeSalary(totalSales));
     }
 }
