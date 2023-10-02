@@ -187,13 +187,13 @@ public class TestMain {
             System.out.println("There was an error during the deletion process!\n");
         }
 
-        isUpdated = list.updateEmployee(1, new myName("Juan", "Dela", "Cruz"),new myDate(11,3,2003), new myDate(4,10,2001), 10, 100.2);
+        isUpdated = list.updateEmployee(1, new myName("Juan", "Dela", "Cruz"), 10, 100.2);
         System.out.println("Is Updated = " + isUpdated);
-        isUpdated = list.updateEmployee(4, new myName("Joshua", "Nico", "Llido"), new myDate(4,3,1999), new myDate(19,3,2003), 800000, 250000);
+        isUpdated = list.updateEmployee(4, new myName("Joshua", "Nico", "Llido"), 800000, 250000);
         System.out.println("Is Updated = " + isUpdated);
-        isUpdated = list.updateEmployee(7, new myName("Alfonso Josh", "Inot", "Atienza"), new myDate(19,7,2003), new myDate(3,3,2008), 100, 312);
+        isUpdated = list.updateEmployee(7, new myName("Alfonso Josh", "Inot", "Atienza"), 100, 312);
         System.out.println("Is Updated = " + isUpdated);
-        isUpdated = list.updateEmployee(10, new myName("Nigeria", "Nayga", "Kneegur"), new myDate(29,8,2003), new myDate(9,9,2020), 500000);
+        isUpdated = list.updateEmployee(10, new myName("Nigeria", "Nayga", "Kneegur"), 500000);
         System.out.println("Is Updated = " + isUpdated);
         System.out.println("DISPLAY ALL EMPLOYEE AFTER Update Employee IDs : 1, 4, 7, 10");
         list.displayAllEmployee();
