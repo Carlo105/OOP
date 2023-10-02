@@ -40,6 +40,10 @@ public class EmployeeRoster {
         return max;
     }
 
+    public int getCount(){
+        return count;
+    }
+
     public void setMax(int max) {
         this.max = max;
     }
