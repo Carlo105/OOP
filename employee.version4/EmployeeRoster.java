@@ -53,13 +53,13 @@ public class EmployeeRoster {
         System.out.printf("%-10s\t||\t%-20s\t||\t%-20s\t||\t%s", "ID", "NAME", "TYPE", "SALARY");
         for(int i=0; i<this.count; i++){
             if(empList[i] instanceof HourlyEmployee){
-                salary = empList[i].computeSalary();
+                salary = ((HourlyEmployee)empList[i]).computeSalary();
             }else if(empList[i] instanceof PieceWorkerEmployee){
-                salary = empList[i].computeSalary();
+                salary = ((PieceWorkerEmployee)empList[i]).computeSalary();
             }else if(empList[i] instanceof ComissionEmployee){
-                salary = empList[i].computeSalary();
+                salary = ((ComissionEmployee)empList[i]).computeSalary();
             }else if(empList[i] instanceof BasePlusComissionEmployee){
-                salary = empList[i].computeSalary();
+                salary = ((BasePlusComissionEmployee)empList[i]).computeSalary();
             }else{
                 salary = 0.00;
             }
