@@ -163,34 +163,33 @@ public class EmployeeRoster {
         return false;
     }
 
-    public EmployeeRoster getEmployee(String name){
+    public EmployeeRoster getEmployee(String word){
         EmployeeRoster list = new EmployeeRoster(this.count);
-        name = name.toUpperCase();
+        word = word.toUpperCase();
         for(int i = 0; i < this.count; i++){
-            if(Objects.equals(name, empList[i].getEmpName().getFirstName().toUpperCase())
-                    || Objects.equals(name, empList[i].getEmpName().getLastName().toUpperCase())
-                    || Objects.equals(name, empList[i].getEmpName().getMiddleName().toUpperCase()) ){
+            if(empList[i].contains(name)==true){
                 list.addEmployee(empList[i]);
             }
         }
         return list;
     }
 
-    public boolean updateEmployee(int id, Name newName, myDate bDate, myDate dateHired, double totalSales) {
+    public boolean updateEmployee(int id, Name newName, double totalSales) {
         for (int i = 0; i < this.count; i++) {
             if (id == empList[i].getEmpId() && empList[i] instanceof CommissionEmployee) {
-                empList[i].ComissionEmployee(id, newName, bDate, dateHired, totalSales);
+                if(newName != empList[i].getName()){
+                }
                 return true;
             }
         }
         return false;
     }
 
-    public boolean updateEmployee(int id, Name newName, myDate bDate, myDate dateHired, double rate, double total) {
+    public boolean updateEmployee(int id, Name newName, double rate, double total) {
         for (int i = 0; i < this.count; i++) {
             if (id == empList[i].getEmpId()) {
                 if(empList[i] instanceof HourlyEmployee){
-                    empList[i].HourlyEmployee(id, newName, bDate, dateHired, totalSales);
+                    empList[i].HourlyEmployee(id, newName, totalSales);
                 }else if(empList[i] instanceof PieceWorkerEmployee){
                     empList[i].PieceWorkerEmployee(id, newName, bDate, dateHired, totalSales);
                 }else if(empList[i] instanceof BasePlusComissionEmployee){
