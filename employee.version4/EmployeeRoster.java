@@ -185,7 +185,7 @@ public class EmployeeRoster {
 		    ((ComissionEmployee) empList[i]).setempName(newName);
 		    changes = true;
 		}
-                if(totalSales != ((CommissionEmployee) empList[i]).getTotalSales()){
+                if(totalSales != ((CommissionEmployee) empList[i]).gettotalSales()){
                     ((CommissionEmployee) empList[i]).settotalSales(totalSales);
                     changes = true;
                 }
