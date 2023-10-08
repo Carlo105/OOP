@@ -199,7 +199,7 @@ public class TestMain {
         list.displayAllEmployee();
 
         EmployeeRoster findEmpList = list.getEmployee("Joshua");
-        System.out.println("\nAll Employees with Twice in there name");
+        System.out.println("\nAll Employees with Joshua in there name");
         findEmpList.displayAllEmployee();
         System.out.println("Count of max employees in TwiceEmpList = " + findEmpList.getMax());
         System.out.println("Count of total employees with 'Twice' in there name = " + findEmpList.getCount() + "\n");
