@@ -167,37 +167,73 @@ public class EmployeeRoster {
         EmployeeRoster list = new EmployeeRoster(this.count);
         word = word.toUpperCase();
         for(int i = 0; i < this.count; i++){
-            if(empList[i].contains(name)==true){
+            String longName = empList[i].getEmpId() + empList[i].gettitle().toUpperCase + empList[i].getEmpName().getFirstName().toUpperCase()
+                    + empList[i].getempName().getlastName().toUpperCase()
+                    +  empList[i].getempName().getmiddleName().toUpperCase() + empList[i].getarticle().toUpperCase();
+            if(longName.contains(word)){
                 list.addEmployee(empList[i]);
             }
         }
         return list;
     }
 
-    public boolean updateEmployee(int id, Name newName, double totalSales) {
+    public boolean updateEmployee(int id, myName newName, double totalSales) {
+        boolean changes = false;
         for (int i = 0; i < this.count; i++) {
-            if (id == empList[i].getEmpId() && empList[i] instanceof CommissionEmployee) {
-                if(newName != empList[i].getName()){
+            if (id == empList[i].getempID()) {
+                if(newName != empList[i].getname()){
+		    ((ComissionEmployee) empList[i]).setempName(newName);
+		    changes = true;
+		}
+                if(totalSales != ((CommissionEmployee) empList[i]).getTotalSales()){
+                    ((CommissionEmployee) empList[i]).settotalSales(totalSales);
+                    changes = true;
                 }
-                return true;
+                return changes;
             }
         }
-        return false;
+        return changes;
     }
 
-    public boolean updateEmployee(int id, Name newName, double rate, double total) {
+    public boolean updateEmployee(int id, myName newName, double rateOrSales, double additionalInfo) {
+        boolean changes = false;
         for (int i = 0; i < this.count; i++) {
-            if (id == empList[i].getEmpId()) {
-                if(empList[i] instanceof HourlyEmployee){
-                    empList[i].HourlyEmployee(id, newName, totalSales);
-                }else if(empList[i] instanceof PieceWorkerEmployee){
-                    empList[i].PieceWorkerEmployee(id, newName, bDate, dateHired, totalSales);
-                }else if(empList[i] instanceof BasePlusComissionEmployee){
-                    empList[i].BasePlusComissionEmployee(id, newName, bDate, dateHired, totalSales);
+            if(id == empList[i].getEmpId()){
+                if(empList[i].getempName() != newName){
+		            empList[i].setempName(newName);
+		            changes = true;
+		        }
+                if (empList[i] instanceof HourlyEmployee) {
+                    if(rateOrSales != ((HourlyEmployee) empList[i]).getratePerHour()){
+                        ((HourlyEmployee) empList[i]).setratePerHour((float)rateOrSales);
+                        changes = true;
+                    }
+                    if(additionalInfo != ((HourlyEmployee) empList[i]).gettotalHoursWorked()){
+                        ((HourlyEmployee) empList[i]).settotalHoursWorked((float)additionalInfo);
+                        changes = true;
+                    }
+                } else if (empList[i] instanceof BasePlusCommissionEmployee) {
+                    if(rateOrSales !=  ((BasePlusCommissionEmployee) empList[i]).gettotalSales()){
+                        ((BasePlusCommissionEmployee) empList[i]).settotalSales(rateOrSales);
+                        changes = true;
+                    }
+                    if(additionalInfo != ((BasePlusCommissionEmployee) empList[i]).getbaseSalary()){
+                        ((BasePlusCommissionEmployee) empList[i]).setbaseSalary(additionalInfo);
+                        changes = true;
+                    }
+                } else if (empList[i] instanceof PieceWorkerEmployee) {
+                    if( rateOrSales != ((PieceWorkerEmployee) empList[i]).getratePerPiece()){
+                        ((PieceWorkerEmployee) empList[i]).setratePerPiece((float)rateOrSales);
+                        changes = true;
+                    }
+                    if(additionalInfo !=  ((PieceWorkerEmployee) empList[i]).gettotalPiecesFinished()){
+                        ((PieceWorkerEmployee) empList[i]).settotalPiecesFinished((int) additionalInfo);
+                        changes = true;
+                    }
                 }
-                return true;
+                return changes;
             }
         }
-        return false;
+        return changes;
     }
-}
+
