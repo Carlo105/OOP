@@ -167,7 +167,7 @@ public class EmployeeRoster {
         EmployeeRoster list = new EmployeeRoster(this.count);
         word = word.toUpperCase();
         for(int i = 0; i < this.count; i++){
-            String longName = empList[i].getEmpId() + empList[i].gettitle().toUpperCase + empList[i].getEmpName().getFirstName().toUpperCase()
+            String longName = empList[i].getempID() + empList[i].gettitle().toUpperCase + empList[i].getempName().getfirstName().toUpperCase()
                     + empList[i].getempName().getlastName().toUpperCase()
                     +  empList[i].getempName().getmiddleName().toUpperCase() + empList[i].getarticle().toUpperCase();
             if(longName.contains(word)){
