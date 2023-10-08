@@ -198,7 +198,7 @@ public class EmployeeRoster {
     public boolean updateEmployee(int id, myName newName, double rateOrSales, double additionalInfo) {
         boolean changes = false;
         for (int i = 0; i < this.count; i++) {
-            if(id == empList[i].getEmpId()){
+            if(id == empList[i].getempID()){
                 if(empList[i].getempName() != newName){
 		            empList[i].setempName(newName);
 		            changes = true;
